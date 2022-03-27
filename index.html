@@ -1,507 +1,558 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 
-<head>
+<html>
 
+<head>
     <!-- 页面标题
   ================================================== -->
     <meta charset="utf-8">
     <title>元宠爱 项目首页</title>
 
     <!-- 文字注释
-  ================================================== -->
+================================================== -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta name="Improver" content="PengJiawei">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- 网页图标 -->
-    <link rel="shortcut icon" type="image/x-icon" href="images/image-324/logo.png" />
+    <!-- logo -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo/logo.png" />
 
-    <!-- CSS 样式 -->
-    <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
+    <!-- css样式 -->
+    <link rel="stylesheet" href="plugins/themefisher-font/style.css">
+    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="plugins/lightbox2/dist/css/lightbox.min.css">
+    <link rel="stylesheet" href="plugins/animate/animate.css">
     <link rel="stylesheet" href="plugins/slick/slick.css">
-    <link rel="stylesheet" href="plugins/slick/slick-theme.css">
-    <link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="plugins/aos/aos.css">
     <link rel="stylesheet" href="css/style.css">
 
 </head>
 
-<body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
+<body id="body">
+
+    <!-- 加载页面 -->
+    <div id="preloader">
+        <div class='preloader'>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!-- <加载页面 -->
+
     <!-- 导航条 -->
     <header class="navigation fixed-top">
-        <nav class="navbar main-nav navbar-expand-lg px-2 px-sm-0 py-2 py-lg-0">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">元宠爱&nbsp;&nbsp;&nbsp;定制独属于你的机器宠物</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="ti-menu"></span>
-				</button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <!-- 第一个 -->
+        <div class="container">
+            <!-- main nav -->
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <!-- logo -->
+                <a class="navbar-brand logo" href="index.html">
+                    <img class="logo-default" src="images/logo.png" alt="logo" />
+                    <img class="logo-white" src="images/logo-white.png" alt="logo" />
+                </a>
+                <!-- /logo -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+                <div class="collapse navbar-collapse" id="navigation">
+                    <ul class="navbar-nav ml-auto text-center">
                         <li class="nav-item dropdown active">
-                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">功能页面
-								<span><i class="ti-angle-down"></i></span>
-							</a>
-                            <!-- 下拉菜单 -->
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item active" href="index.html">系统首页</a></li>
-                                <li><a class="dropdown-item" href="proposal.html">项目提案</a></li>
-                                <li><a class="dropdown-item" href="https://github.com/zcccccz/zcccccz.github.io">博客地址</a></li>
-                                <li class="dropdown dropdown-submenu dropright">
-                                    <a class="dropdown-item dropdown-toggle" href="#!" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">校园网站</a>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdown0301">
-                                        <li><a class="dropdown-item" href="https://www.seu.edu.cn/">东南大学</a></li>
-                                        <li><a class="dropdown-item" href="https://wjx.seu.edu.cn/">吴健雄学院</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Homepage
+            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="index.html">Homepage</a>
+                                <a class="dropdown-item" href="onepage-slider.html">Onepage</a>
+                                <a class="dropdown-item" href="onepage-text.html">Onepage 2</a>
+                            </div>
                         </li>
-                        <!-- 第二个 -->
-                        <li class="nav-item dropdown @@pages">
-                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">系统模块
-								<span><i class="ti-angle-down"></i></span>
-							</a>
-                            <!-- Dropdown list -->
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="index.html#introduction">项目介绍</a></li>
-                                <li><a class="dropdown-item" href="index.html#prospect">项目前景</a></li>
-                                <li><a class="dropdown-item" href="index.html#team">开发团队</a></li>
-                                <li><a class="dropdown-item" href="index.html#expectation">开发展望</a></li>
-                                <li class="dropdown dropdown-submenu dropright">
-                                    <a class="dropdown-item dropdown-toggle" href="proposal.html">项目提案</a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="proposal.html#research_questions">研究问题</a>
-                                        </li>
-                                        <li><a class="dropdown-item" href="proposal.html#target_user">目标用户</a></li>
-                                        <li><a class="dropdown-item" href="proposal.html#solution">解决方案</a></li>
-                                        <li><a class="dropdown-item" href="proposal.html#division">成员分工</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="about.html">About Us</a>
                         </li>
-                        <!-- 第三个 -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="https://github.com/zcccccz/zcccccz.github.io">博客地址</a>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="service.html">Services</a>
                         </li>
-                        <!-- 第四个 -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="proposal.html">详细信息</a>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="portfolio.html">Portfolio</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="team.html">Team</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="pricing.html">Pricing</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Pages
+            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="404.html">404 Page</a>
+                                <a class="dropdown-item" href="blog.html">Blog Page</a>
+                                <a class="dropdown-item" href="single-post.html">Blog Single Page</a>
+                            </div>
                         </li>
                     </ul>
                 </div>
-            </div>
-        </nav>
+            </nav>
+            <!-- /main nav -->
+        </div>
     </header>
-    <!-- End of 导航条 -->
-
-    <!-- 头图  -->
-    <section class="section gradient-banner">
-        <!-- 会动的小长条 -->
-        <div class="shapes-container">
-            <div class="shape" data-aos="fade-down-left" data-aos-duration="1500" data-aos-delay="100"></div>
-            <div class="shape" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100"></div>
-            <div class="shape" data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="200"></div>
-            <div class="shape" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"></div>
-            <div class="shape" data-aos="fade-down-left" data-aos-duration="1000" data-aos-delay="100"></div>
-            <div class="shape" data-aos="fade-down-left" data-aos-duration="1000" data-aos-delay="100"></div>
-            <div class="shape" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300"></div>
-            <div class="shape" data-aos="fade-down-right" data-aos-duration="500" data-aos-delay="200"></div>
-            <div class="shape" data-aos="fade-down-right" data-aos-duration="500" data-aos-delay="100"></div>
-            <div class="shape" data-aos="zoom-out" data-aos-duration="2000" data-aos-delay="500"></div>
-            <div class="shape" data-aos="fade-up-right" data-aos-duration="500" data-aos-delay="200"></div>
-            <div class="shape" data-aos="fade-down-left" data-aos-duration="500" data-aos-delay="100"></div>
-            <div class="shape" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0"></div>
-            <div class="shape" data-aos="fade-down" data-aos-duration="500" data-aos-delay="0"></div>
-            <div class="shape" data-aos="fade-up-right" data-aos-duration="500" data-aos-delay="100"></div>
-            <div class="shape" data-aos="fade-down-left" data-aos-duration="500" data-aos-delay="0"></div>
-        </div>
-        <!-- 介绍文字 -->
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-8 order-2 order-md-1 text-center text-md-left">
-                    <h1 class="text-white font-weight-bold mb-4">Unique Lovely Robot Pet
-                    </h1>
-                    <h2 class="text-white font-weight-bold mb-4">元宠爱——定制独属于你的机器宠物</h2>
-                    <p class="text-white mb-5">
-                        本项目由团队<a href="#team">“越人工越智能” </a>进行开发，项目着力于为热爱虚拟现实技术领域的用户<br /> 提供先进可靠的交互设备，共同探索未来虚拟现实世界的乐趣
-                    </p>
-                    <!-- <a href="#proposal" class="btn btn-main-md font-weight-bold">查看项目提案</a> -->
-                </div>
-                <div class="col-md-4 text-center order-1 order-md-2">
-                    <img class="img-fluid" src="images/animals/cat1.png" alt="screenshot">
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--====  End of 头图  ====-->
-
-    <!-- 头图下方小横条 -->
-    <section class="section pt-0 position-relative pull-top">
-        <div class="container">
-            <div class="rounded shadow p-5 bg-white">
+    <!-- 导航条 -->
+    <div class="hero-slider">
+        <div class="slider-item th-fullpage hero-area" style="background-image: url(images/slider/slider-bg-1.jpg);">
+            <div class="container">
                 <div class="row">
-                    <div class="col-lg-4 col-md-6 mt-5 mt-md-0 text-center">
-                        <i class="ti-paint-bucket text-primary h1"></i>
-                        <h3 class="mt-3 text-capitalize h4 ">简约设计</h3>
-                        <p class="regular text-muted">
-                            回归本质，沉没繁琐<br /> 产品追求功能浓缩、精简设计 <br /> 易上手，便交互 <br /> 用户无需烦恼繁琐操作 <br />
-
-                        </p>
-                    </div>
-                    <div class="col-lg-4 col-md-12 mt-5 mt-lg-0 text-center">
-                        <i class="ti-thought text-primary h1"></i>
-                        <h3 class="mt-3 text-capitalize h4 ">智能前沿</h3>
-                        <p class="regular text-muted">
-                            释放智慧，沉浸其中<br /> 项目关注人机交互领域前沿技术
-                            <br /> 重科研，谋智能
-                            <br /> 为用户带来先进科技人机交互盛宴 <br />
-
-
-                        </p>
-                        </p>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mt-5 mt-md-0 text-center">
-                        <i class="ti-shine text-primary h1"></i>
-                        <h3 class="mt-3 text-capitalize h4 ">新颖外观</h3>
-                        <p class="regular text-muted">
-                            舒适享受，沉淀心境<br /> 项目十分注重产品外观的设计 <br /> 科技感、极简风
-                            <br /> 打造用户喜爱的美观产品 <br />
-
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-    </section>
-    <!--  End of 头图下方小横条 -->
-
-    <!-- 项目介绍 -->
-    <section class="feature section pt-6" id="introduction">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 ml-auto align-self-center">
-                    <div class="feature-content">
-                        <!-- 标题 -->
-                        <h1>项目介绍</h1>
-                        <p>
-                            <strong>虚拟现实（Virtual
-								Reality）</strong>是人类通过可视化操作以及人机交互设计模拟现实世界的一项技术，虚拟现实设备利用计算机生成模拟环境，使用户沉浸到该虚拟环境中。<br />
-                            <br /> 本项目由团队“越人工越智能”进行开发，项目着力于为热爱虚拟现实技术领域的用户提供先进可靠的交互设备。
-                            <br />
-                        </p>
-                    </div>
-                    <!-- Testimonial Quote -->
-                    <div class="testimonial">
-                        <p>
-                            The key problem of artificial intelligence is its manifestation.<br /> "人工智能的关键性问题是其表现形式。"
-
-                        </p>
-                        <ul class="list-inline meta">
-                            <li class="list-inline-item">
-                                <img src="images/image-310/Jeff Hawkins.jpg" alt="">
-                            </li>
-                            <li class="list-inline-item">Jeff Hawkins</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-6 mr-auto justify-content-center">
-                    <!-- Feature mockup -->
-                    <div class="image-content" data-aos="fade-left">
-                        <img class="img-fluid" src="images/image-310/pic1.png" alt="插图1">
+                    <div class="col-md-12 text-center">
+                        <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">Crafting Digital <br> Experience
+                        </h1>
+                        <p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, <br> veritatis tempore nostrum id officia quaerat eum corrupti, <br> ipsa aliquam velit.</p>
+                        <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn btn-main" href="service.html">Explore Us</a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- End of 项目介绍 -->
-
-    <!-- 项目前景 -->
-    <section class="section about p-6" id="prospect">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-8 m-auto  page-title">
-                    <!--标题 -->
-                    <h1>项目前景</h1>
-                    <!-- 标题描述 -->
-                    <p>
-                        随着近几年虚拟现实技术的发展，VR正在为各行各业带来升级换代的发展机遇<br /> 推动者硬件、核心芯片、计算机软件和应用等多个相关领域的技术进步
-                        <br />
-                    </p>
-                </div>
-                <!-- 左侧图片 -->
-                <div class="col-lg-6 mt-4 mt-lg-2">
-                    <div class="about-slider">
-                        <div class="item">
-                            <img class="w-100" src="images/image-313/vr-p3.jpg" alt="slider-image">
-                        </div>
-                        <div class="item">
-                            <img class="w-100" src="images/image-313/vr-p1.jpg" alt="slider-image">
-                        </div>
-                        <div class="item">
-                            <img class="w-100" src="images/image-313/vr-p2.jpg" alt="slider-image">
-                        </div>
+        <div class="slider-item th-fullpage hero-area" style="background-image: url(images/slider/slider-bg-2.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1 data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".1">We Combine Design <br> and Creativity
+                        </h1>
+                        <p data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".5">Create just what you need for your Perfect Website. Choose from a wide range
+                            <br> of Elements & simply put them on our Canvas.</p>
+                        <a data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".8" class="btn btn-main" href="service.html">Explore Us</a>
                     </div>
                 </div>
-                <!-- 右侧文字 -->
-                <div class="col-lg-6 align-self-center">
-                    <div class="content text-center text-lg-left">
-                        <h2>“元宇宙”的火热与壁垒</h2>
-                        <p>
-                            “元宇宙”一词源于 1992 年尼尔·斯蒂芬森的《雪崩》，2021年Roblox作为“元宇宙”概念股上市首日市值突破400亿美元。
-                            <br /> 元宇宙巨大的潜在价值引起了人们的热切关注，作为元宇宙显示技术的核心之一——虚拟现实技术，近几年再次掀起热潮。
-                            <br /> 然而，目前虚拟现实设备存在着交互方式单一、使用受到空间限制等诸多缺点，因此，本项目计划开发新的交互设备以及研究新的交互方式，打造更受用户喜爱的交互世界，共同探索元宇宙的曙光。
-                        </p>
-                        <br />
-                        <div class="feature">
-                            <div class="testimonial">
-                                <p>
-                                    「元宇宙」的内涵是吸纳了信息革命（5G/6G)、互联网革命（web3.0）、人工智能革命，以及 VR、AR、MR，特别是游戏引擎在内的虚拟现实技术革命的成果，向人类展现出构建与传统物理世界平行的全息数字世界的可能性"———数字资产研究院学术与技术委员会主任朱嘉明教授
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
-    </section>
-    <!-- End of 项目前景 -->
+    </div>
 
 
 
-    <!-- 开发团队 -->
-    <section class="section  about  pt-6" id="team">
+
+    <!--
+Start About Section
+==================================== -->
+    <section class="service-2 section">
         <div class="container">
-            <div class="col-sm-12 m-4  section-title">
-                <h1>开发团队</h1>
-                <p>本系统为<a href="https://www.seu.edu.cn/">东南大学</a>《感知与人机交互》课程2022年第3学期课程项目<br /> 由团队“越人工越智能”（More artificial, more intelligent）进行开发设计 <br /> 团队成员为东南大学四名在读本科生，团队成员详细资料如下 <br />
-                </p>
-            </div>
             <div class="row">
-                <!-- 第一位成员 -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="team-sm">
-                        <!-- 人员图片 -->
-                        <div class="image">
-                            <img class="w-100" src="images/image-310/index-pjw.jpg" alt="member-image">
-                            <!-- 图片链接 -->
-                            <div class="social-links">
-                                <ul class="list-inline">
-                                    <li class="list-inline-item"><a href="https://github.com/GaryJiajia"><i
-												class="ti-github"></i></a></li>
-                                </ul>
+
+                <div class="col-12">
+                    <!-- section title -->
+                    <div class="title text-center">
+                        <h2>What Do We Offer</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, earum. </p>
+                        <div class="border"></div>
+                    </div>
+                    <!-- /section title -->
+                </div>
+
+                <div class="col-md-4 text-center">
+                    <img src="images/about/member.jpg" class="inline-block" alt="">
+                </div>
+                <div class="col-md-8">
+                    <div class="row text-center">
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="service-item">
+                                <i class="tf-ion-ios-alarm-outline"></i>
+                                <h4>Time Management</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae risus nec dui venenatis.</p>
                             </div>
                         </div>
-                        <!-- 姓名 -->
-                        <h3>61519109 彭嘉炜</h3>
-                        <!-- 邮箱 -->
-                        <button style="border:none; margin: 0; padding: 0; background-color: transparent" data-copytarget="#copy1">pengjiawei@seu.edu.cn</button>
-                        <!-- 介绍 -->
-                        <p>
-                            项目组长<br /> 东南大学吴健雄学院大三本科生 <br /> 负责组织团队开展工作、项目构想与汇报、页面前端开发
-                            <input type="text" id="copy1" value="pengjiawei@seu.edu.cn" style="opacity: 0">
-                        </p>
-                    </div>
-                </div>
-                <!-- 第二位成员 -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="team-sm">
-                        <!-- 人员图片 -->
-                        <div class="image">
-                            <img class="w-100" src="images/image-310/index-zcz.JPG" alt="member-image">
-                            <!-- 图片链接 -->
-                            <div class="social-links">
-                                <ul class="list-inline">
-                                    <li class="list-inline-item"><a href="https://github.com/zcccccz"><i
-												class="ti-github"></i></a></li>
-                                </ul>
+                        <!-- END COL -->
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="service-item">
+                                <i class="tf-ion-ios-briefcase-outline"></i>
+                                <h4>Marketing Ideas</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae risus nec dui venenatis.</p>
                             </div>
                         </div>
-                        <!-- 姓名 -->
-                        <h3>61519112 张从致</h3>
-                        <!-- 邮箱 -->
-                        <button style="border:none; margin: 0; padding: 0; background-color: transparent" data-copytarget="#copy2">邮箱待填写</button>
-                        <!-- 介绍 -->
-                        <p>
-                            项目成员<br /> 东南大学吴健雄学院大三本科生 <br /> 负责文献调研、技术调研、针对已有方法的改进与创新
-                            <input type="text" id="copy2" value="#" style="opacity: 0">
-                        </p>
-                    </div>
-                </div>
-                <!-- 第三位成员 -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="team-sm">
-                        <!-- 人员图片 -->
-                        <div class="image">
-                            <img class="w-100" src="images/image-310/index-qyc.jpg" alt="member-image">
-                            <!-- 图片链接 -->
-                            <div class="social-links">
-                                <ul class="list-inline">
-                                    <li class="list-inline-item"><a href="https://github.com/qinyongchun"><i
-												class="ti-github"></i></a></li>
-                                </ul>
+                        <!-- END COL -->
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="service-item">
+                                <i class="tf-ion-ios-email-outline"></i>
+                                <h4>Mail Support</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae risus nec dui venenatis.</p>
                             </div>
                         </div>
-                        <!-- 姓名 -->
-                        <h3>61519122 秦镛淳</h3>
-                        <!-- 邮箱 -->
-                        <button style="border:none; margin: 0; padding: 0; background-color: transparent" data-copytarget="#copy3">邮箱待填写</button>
-                        <!-- 介绍 -->
-                        <p>
-                            项目成员<br /> 东南大学吴健雄学院大三本科生 <br /> 负责文献调研、算法研究、页面前端改进
-                            <input type="text" id="copy3" value="#" style="opacity: 0">
-                        </p>
-                    </div>
-                </div>
-                <!-- 第四位成员 -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="team-sm">
-                        <!-- 人员图片 -->
-                        <div class="image">
-                            <img class="w-100" src="images/image-310/index-zsa.jpg" alt="member-image">
-                            <!-- 图片链接 -->
-                            <div class="social-links">
-                                <ul class="list-inline">
-                                    <li class="list-inline-item"><a href="#"><i class="ti-github"></i></a></li>
-                                </ul>
+                        <!-- END COL -->
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="service-item">
+                                <i class="tf-ion-ios-locked-outline"></i>
+                                <h4>Secure System</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae risus nec dui venenatis.</p>
                             </div>
                         </div>
-                        <!-- 姓名 -->
-                        <h3>61519226 朱顺安</h3>
-                        <!-- 邮箱 -->
-                        <button style="border:none; margin: 0; padding: 0; background-color: transparent" data-copytarget="#copy4">邮箱待填写</button>
-                        <!-- 介绍 -->
-                        <p>
-                            项目成员<br /> 东南大学吴健雄学院大三本科生 <br /> 负责调研结果汇总、用户调研、相关软件开发
-                            <input type="text" id="copy4" value="#" style="opacity: 0">
-                        </p>
+                        <!-- END COL -->
                     </div>
                 </div>
-                <!-- 下方边框 -->
+            </div>
+            <!-- End row -->
+        </div>
+        <!-- End container -->
+    </section>
+    <!-- End section -->
+
+    <!--
+Start About Section
+==================================== -->
+    <section class="about-2 section" id="about">
+        <div class="container">
+            <div class="row">
+
+                <!-- section title -->
+                <div class="col-12">
+                    <div class="title text-center">
+                        <h2>We Are Bingo Agency</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam reprehenderit accusamus labore iusto, aut, eum itaque illo totam tempora eius.</p>
+                        <div class="border"></div>
+                    </div>
+                </div>
+                <!-- /section title -->
+
+                <div class="col-md-6">
+                    <img src="images/about/about-2.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-md-6">
+                    <ul class="checklist">
+                        <li>Donec sed odio dui. Aenean eu leo quam. Pellentesque ornare sem laca quam venenatis vestibulum.</li>
+                        <li>Aenean quam. Pellentesque ornare sem laca quam venenatis vestibulum.</li>
+                        <li>Donec sed odio dui. Aenean eu leo quam. Pellentesque ornare sem laca quam venenatis vestibulum.</li>
+                        <li>Etiam porta sem multipage evint landing magna mollis euismod a pharetra augue.</li>
+                        <li>Aenean quam. Pellentesque ornare sem laca quam venenatis vestibulum.</li>
+                    </ul>
+                    <a href="#" class="btn btn-main mt-20">Learn More</a>
+                </div>
+            </div>
+            <!-- End row -->
+        </div>
+        <!-- End container -->
+    </section>
+    <!-- End section -->
+
+    <!--
+Start Call To Action
+==================================== -->
+    <section class="call-to-action section">
+        <div class="container">
+            <div class="row">
                 <div class="col-md-12 text-center">
-                    <span class="col-md-4"><a href="proposal.html#division" class="btn btn-main-md font-weight-bold"
-							style="background-color: rgba(173, 173, 173, 0.918);">查看团队分工</a></span>
-                    <span class="col-md-4"></span>
-                    <span class="col-md-4"><a href="https://github.com/zcccccz/zcccccz.github.io"
-							class="btn btn-main-md font-weight-bold"
-							style="background-color: rgba(173, 173, 173, 0.918);">查看项目源码</a>
-					</span>
+                    <h2>Let's Create Something Together</h2>
+                    <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicudin bibendum auctor, <br> nisi elit consequat ipsum, nesagittis sem nid elit. Duis sed odio sitain elit.</p>
+                    <a href="" class="btn btn-main">Contact Us</a>
                 </div>
             </div>
+            <!-- End row -->
         </div>
+        <!-- End container -->
     </section>
-    <!-- End of 开发团队  -->
+    <!-- End section -->
 
+    <!--
+		Start Counter Section
+		==================================== -->
 
-    <!-- 后续展望 -->
-    <section class="video-promo section bg-1" id="expectation">
+    <section class="counter-wrapper section-sm">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="title">
+                        <h2>Award-Winning Agency</h2>
+                        <p>Vestibulum nisl tortor, consectetur quis imperdiet bibendum, laoreet sed arcu. Sed condimentum iaculis ex, in faucibus lorem accumsan non. Donec mattis tincidunt metus. Morbi sed tortor a risus luctus dignissim.</p>
+                    </div>
+                </div>
+                <!-- first count item -->
+                <div class="col-md-3 col-sm-6 col-xs-6 text-center ">
+                    <div class="counters-item">
+                        <i class="tf-ion-ios-alarm-outline"></i>
+                        <div>
+                            <span class="counter" data-count="150">0</span>
+                        </div>
+                        <h3>Happy Clients</h3>
+                    </div>
+                </div>
+                <!-- end first count item -->
+
+                <!-- second count item -->
+                <div class="col-md-3 col-sm-6 col-xs-6 text-center ">
+                    <div class="counters-item">
+                        <i class="tf-ion-ios-analytics-outline"></i>
+                        <div>
+                            <span class="counter" data-count="130">0</span>
+                        </div>
+                        <h3>Projects completed</h3>
+                    </div>
+                </div>
+                <!-- end second count item -->
+
+                <!-- third count item -->
+                <div class="col-md-3 col-sm-6 col-xs-6 text-center ">
+                    <div class="counters-item">
+                        <i class="tf-ion-ios-compose-outline"></i>
+                        <div>
+                            <span class="counter" data-count="99">0</span>
+                        </div>
+                        <h3>Positive feedback</h3>
+
+                    </div>
+                </div>
+                <!-- end third count item -->
+
+                <!-- fourth count item -->
+                <div class="col-md-3 col-sm-6 col-xs-6 text-center ">
+                    <div class="counters-item kill-border">
+                        <i class="tf-ion-ios-bolt-outline"></i>
+                        <div>
+                            <span class="counter" data-count="250">0</span>
+                        </div>
+                        <h3>Cups of Coffee</h3>
+                    </div>
+                </div>
+                <!-- end fourth count item -->
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container -->
+    </section>
+    <!-- end section -->
+
+    <!-- Start Testimonial
+=========================================== -->
+
+    <section class="testimonial section" id="testimonial">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="content-block">
-                        <!-- Heading -->
-                        <h2>开发展望</h2>
-                        <!-- Promotional Speech -->
-                        <p>
-                            本项目计划开发新型VR设备<br /> 安全实现小范围内自由移动
-                            <br /> 并开发应用于VR头显的新算法
-                            <br /> 实时检测周围环境提醒设备使用者
-                            <br /> 并且使用小设备的运动捕捉
-                            <br /> 实现在虚拟实现中实现三维重建
-                            <br /> 让我们一同创造
-                            <br /> 全新的VR世界
-                            <br /> ……
-                            <br />
-                        </p>
+                    <!-- testimonial wrapper -->
+                    <div class="testimonial-slider">
+                        <!-- testimonial single -->
+                        <div class="item text-center">
+                            <i class="tf-ion-chatbubbles"></i>
+                            <!-- client info -->
+                            <div class="client-details">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nulla, soluta dolorum. Eos earum, magni asperiores, unde corporis labore, enim, voluptatum officiis voluptates alias natus. Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Quia, officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, quia?</p>
+                            </div>
+                            <!-- /client info -->
+                            <!-- client photo -->
+                            <div class="client-thumb">
+                                <img src="images/client-logo/clients-1.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="client-meta">
+                                <h3>William Martin</h3>
+                                <span>CEO , Company Name</span>
+                            </div>
+                            <!-- /client photo -->
+                        </div>
+                        <!-- /testimonial single -->
+
+                        <!-- testimonial single -->
+                        <div class="item text-center">
+                            <i class="tf-ion-chatbubbles"></i>
+                            <!-- client info -->
+                            <div class="client-details">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nulla, soluta dolorum. Eos earum, magni asperiores, unde corporis labore, enim, voluptatum officiis voluptates alias natus. Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Quia, officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, quia?</p>
+                            </div>
+                            <!-- /client info -->
+                            <!-- client photo -->
+                            <div class="client-thumb">
+                                <img src="images/client-logo/clients-2.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="client-meta">
+                                <h3>Emma Harrison</h3>
+                                <span>CEO , Company Name</span>
+                            </div>
+                            <!-- /client photo -->
+                        </div>
+                        <!-- /testimonial single -->
+
+                        <!-- testimonial single -->
+                        <div class="item text-center">
+                            <i class="tf-ion-chatbubbles"></i>
+                            <!-- client info -->
+                            <div class="client-details">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nulla, soluta dolorum. Eos earum, magni asperiores, unde corporis labore, enim, voluptatum officiis voluptates alias natus. Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Quia, officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, quia?</p>
+                            </div>
+                            <!-- /client info -->
+                            <!-- client photo -->
+                            <div class="client-thumb">
+                                <img src="images/client-logo/clients-3.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="client-meta">
+                                <h3>Alexander Lucas</h3>
+                                <span>CEO , Company Name</span>
+                            </div>
+                            <!-- /client photo -->
+                        </div>
+                        <!-- /testimonial single -->
                     </div>
                 </div>
+                <!-- end col lg 12 -->
             </div>
+            <!-- End row -->
         </div>
+        <!-- End container -->
     </section>
-    <!-- End of 后续展望 -->
+    <!-- End Section -->
 
-    <!-- 底部 -->
-    <footer>
-        <div class="footer-main">
+    <!--
+		Start Blog Section
+		=========================================== -->
+
+    <section class="blog" id="blog">
+        <div class="container">
+            <div class="row">
+
+                <!-- section title -->
+                <div class="col-12">
+                    <div class="title text-center ">
+                        <h2> Latest <span class="color">Posts</span></h2>
+                        <div class="border"></div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus facere accusamus, reprehenderit libero inventore nam.</p>
+                    </div>
+                </div>
+                <!-- /section title -->
+                <!-- single blog post -->
+                <article class="col-md-4 col-sm-6 col-xs-12 clearfix ">
+                    <div class="post-item">
+                        <div class="media-wrapper">
+                            <img src="images/blog/post-1.jpg" alt="amazing caves coverimage" class="img-fluid">
+                        </div>
+
+                        <div class="content">
+                            <h3><a href="single-post.html">Reasons to Smile</a></h3>
+                            <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non skateboard dolor brunch.</p>
+                            <a class="btn btn-main" href="single-post.html">Read more</a>
+                        </div>
+                    </div>
+                </article>
+                <!-- /single blog post -->
+
+                <!-- single blog post -->
+                <article class="col-md-4 col-sm-6 col-xs-12 ">
+                    <div class="post-item">
+                        <div class="media-wrapper">
+                            <img src="images/blog/post-2.jpg" alt="amazing caves coverimage" class="img-fluid">
+                        </div>
+
+                        <div class="content">
+                            <h3><a href="single-post.html">A Few Moments</a></h3>
+                            <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non skateboard dolor brunch.</p>
+                            <a class="btn btn-main" href="single-post.html">Read more</a>
+                        </div>
+                    </div>
+                </article>
+                <!-- end single blog post -->
+
+                <!-- single blog post -->
+                <article class="col-md-4 col-sm-6 col-xs-12 ">
+                    <div class="post-item">
+                        <div class="media-wrapper">
+                            <img src="images/blog/post-3.jpg" alt="amazing caves coverimage" class="img-fluid">
+                        </div>
+
+                        <div class="content">
+                            <h3><a href="single-post.html">Hints for Life</a></h3>
+                            <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non skateboard dolor brunch.</p>
+                            <a class="btn btn-main" href="single-post.html">Read more</a>
+                        </div>
+                    </div>
+                </article>
+                <!-- end single blog post -->
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container -->
+    </section>
+    <!-- end section -->
+
+    <footer id="footer" class="bg-one">
+        <div class="top-footer">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-2 col-md-3 col-6 mt-5 mt-lg-0">
-                        <!-- 空 -->
+                    <div class="col-sm-3 col-md-3 col-lg-3">
+                        <h3>about</h3>
+                        <p>Integer posuere erat a ante venenati dapibus posuere velit aliquet. Fusce dapibus, tellus cursus commodo, tortor mauris sed posuere.</p>
                     </div>
-                    <div class="col-lg-2 col-md-3 col-6 mt-5 mt-lg-0">
-                        <div class="block-2">
-                            <h6>功能页面</h6>
-                            <ul>
-                                <li><a href="index.html">系统首页</a></li>
-                                <li><a href="proposal.html">项目提案</a></li>
-                                <li><a href="https://github.com/zcccccz/zcccccz.github.io">博客地址</a></li>
-                                <li><a href="https://www.seu.edu.cn/">校园网站</a></li>
-                            </ul>
-                        </div>
+                    <!-- End of .col-sm-3 -->
+
+                    <div class="col-sm-3 col-md-3 col-lg-3">
+                        <ul>
+                            <li>
+                                <h3>Our Services</h3>
+                            </li>
+                            <li><a href="#">Graphic Design</a></li>
+                            <li><a href="#">Web Design</a></li>
+                            <li><a href="#">Web Development</a></li>
+                        </ul>
                     </div>
-                    <div class="col-lg-2 col-md-3 col-6 mt-5 mt-lg-0">
-                        <div class="block-2">
-                            <h6>项目了解</h6>
-                            <ul>
-                                <li><a href="index.html#introduction">项目介绍</a></li>
-                                <li><a href="index.html#prospect">项目前景</a></li>
-                                <li><a href="index.html#expectation">开发展望</a></li>
-                                <li><a href="index.html#team">开发团队</a></li>
-                            </ul>
-                        </div>
+                    <!-- End of .col-sm-3 -->
+
+                    <div class="col-sm-3 col-md-3 col-lg-3">
+                        <ul>
+                            <li>
+                                <h3>Quick Links</h3>
+                            </li>
+                            <li><a href="#">Partners</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">FAQ’s</a></li>
+                            <li><a href="#">Badges</a></li>
+                        </ul>
                     </div>
-                    <div class="col-lg-2 col-md-3 col-6 mt-5 mt-lg-0">
-                        <div class="block-2">
-                            <h6>项目提案</h6>
-                            <ul>
-                                <li><a href="proposal.html#research_questions">研究问题</a></li>
-                                <li><a href="proposal.html#target_user">目标用户</a></li>
-                                <li><a href="proposal.html#solution">解决方案</a></li>
-                                <li><a href="proposal.html#division">成员分工</a></li>
-                            </ul>
-                        </div>
+                    <!-- End of .col-sm-3 -->
+
+                    <div class="col-sm-3 col-md-3 col-lg-3">
+                        <ul>
+                            <li>
+                                <h3>Connect with us Socially</h3>
+                            </li>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Youtube</a></li>
+                            <li><a href="#">Pinterest</a></li>
+                        </ul>
                     </div>
-                    <div class="col-lg-2 col-md-3 col-6 mt-5 mt-lg-0">
-                        <div class="block-2">
-                            <h6>暂定功能</h6>
-                            <ul>
-                                <li><a href="##">功能暂定</a></li>
-                                <li><a href="##">功能暂定</a></li>
-                                <li><a href="##">功能暂定</a></li>
-                                <li><a href="##">功能暂定</a></li>
-                            </ul>
-                        </div>
-                    </div>
+                    <!-- End of .col-sm-3 -->
+
                 </div>
             </div>
+            <!-- end container -->
         </div>
-        <div class="text-center bg-dark py-4">
-            <small class="text-secondary">Copyright &copy;
-				<script>document.write(new Date().getFullYear())</script>. Designed &amp; Developed by <a
-					href="https://www.seu.edu.cn/">SEUers</a>
-			</small class="text-secondary">
-		</div>
-	</footer>
-	<!-- End of 底部 -->
+        <div class="footer-bottom">
+            <h5>Copyright 2016. All rights reserved.</h5>
+            <h6>Design and Developed by <a href="">Themefisher</a></h6>
+        </div>
+    </footer>
+    <!-- end footer -->
 
-	<!-- 回到顶部 -->
-	<div class="scroll-top-to">
-		<i class="ti-angle-up"></i>
-	</div>
 
-	<!-- js文件 -->
-	<script src="plugins/jquery/jquery.min.js"></script>
-	<script src="plugins/bootstrap/bootstrap.min.js"></script>
-	<script src="plugins/slick/slick.min.js"></script>
-	<script src="plugins/fancybox/jquery.fancybox.min.js"></script>
-	<script src="plugins/syotimer/jquery.syotimer.min.js"></script>
-	<script src="plugins/aos/aos.js"></script>
-	<script src="js/script.js"></script>
-	<script src="js/copy.js"></script>
+    <!-- end Footer Area
+    ========================================== -->
+
+
+
+    <!-- js文件 -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>
+    <script src="plugins/google-map/gmap.js"></script>
+    <script src="plugins/form-validation/jquery.form.js"></script>
+    <script src="plugins/form-validation/jquery.validate.min.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="plugins/parallax/jquery.parallax-1.1.3.js"></script>
+    <script src="plugins/lightbox2/dist/js/lightbox.min.js"></script>
+    <script src="plugins/slick/slick.min.js"></script>
+    <script src="plugins/filterizr/jquery.filterizr.min.js"></script>
+    <script src="plugins/smooth-scroll/smooth-scroll.min.js"></script>
+    <script src="js/script.js"></script>
+
 </body>
 
 </html>
