@@ -17,12 +17,18 @@
     <!-- logo -->
     <link rel="shortcut icon" type="image/x-icon" href="images/logo/logo.png" />
     <!-- CSS 样式 -->
-    <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="plugins/slick/slick.css">
     <link rel="stylesheet" href="plugins/slick/slick-theme.css">
     <link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="plugins/aos/aos.css">
+    <link rel="stylesheet" href="plugins/aos/aos.css"> -->
+    <link rel="stylesheet" href="plugins/old/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="plugins/old/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="plugins/old/slick/slick.css">
+    <link rel="stylesheet" href="plugins/old/slick/slick-theme.css">
+    <link rel="stylesheet" href="plugins/old/fancybox/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="plugins/old/aos/aos.css">
     <link rel="stylesheet" href="css/style_old.css">
 
 </head>
@@ -30,23 +36,21 @@
 <body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
     <!-- 导航条 -->
     <header class="navigation">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="collapse navbar-collapse" id="navigation">
-                    <ul class="navbar-nav text-center">
-                        <li class="nav-item ">
-                            <a class="nav-link" href="index.html">元宠爱&nbsp;&nbsp;&nbsp;定制独属于你的机器宠物</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- 右边导航 -->
-                <div class="collapse navbar-collapse" id="navigation">
-                    <ul class="navbar-nav ml-auto text-center">
+        <nav class="navbar main-nav navbar-expand-lg px-2 px-sm-0 py-2 py-lg-0">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">元宠爱&nbsp;&nbsp;&nbsp;定制独属于你的机器宠物</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="ti-menu"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
                             <a class="nav-link" href="index.html">系统首页</a>
                         </li>
                         <li class="nav-item  dropdown active">
-                            <a class="nav-link dropdown-toggle" href="proposal.html">项目提案</a>
+                            <a class="nav-link dropdown-toggle" href="proposal.html">项目提案
+                                <span><i class="ti-angle-down"></i></span>
+                            </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="#">研究问题</a></li>
                                 <li><a class="dropdown-item" href="#">目标用户</a></li>
@@ -55,7 +59,9 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="analysis.html">技术路线</a>
+                            <a class="nav-link dropdown-toggle" href="analysis.html">技术路线
+                                <span><i class="ti-angle-down"></i></span>
+                            </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="team.html">项目简述</a></li>
                                 <li><a class="dropdown-item" href="index.html">用户类型</a></li>
@@ -84,8 +90,8 @@
                         </li> -->
                     </ul>
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
     </header>
 
     <!-- 网页标题 -->
@@ -203,11 +209,11 @@
     </div>
 
     <!-- js文件 -->
-    <script src="plugins/jquery/jquery.min.js"></script>
-    <script src="plugins/bootstrap/bootstrap.min.js"></script>
-    <script src="plugins/slick/slick.min.js"></script>
-    <script src="plugins/fancybox/jquery.fancybox.min.js"></script>
-    <script src="plugins/syotimer/jquery.syotimer.min.js"></script>
-    <script src="plugins/aos/aos.js"></script>
-    <script src="js/script.js"></script>
+    <script src="plugins/old/jquery/jquery.min.js"></script>
+    <script src="plugins/old/bootstrap/bootstrap.min.js"></script>
+    <script src="plugins/old/slick/slick.min.js"></script>
+    <script src="plugins/old/fancybox/jquery.fancybox.min.js"></script>
+    <script src="plugins/old/syotimer/jquery.syotimer.min.js"></script>
+    <script src="plugins/old/aos/aos.js"></script>
+    <script src="js/script_old.js"></script>
 </body>
